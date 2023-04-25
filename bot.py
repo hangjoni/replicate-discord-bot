@@ -16,13 +16,14 @@ bot = commands.Bot(
 )
 
 
-@bot.command()
-async def dream(ctx, *, prompt):
+@bot.command(aliases=["sd"])
+async def stable_diffusion(ctx, *, prompt):
     """Generate an image from a text prompt using the stable-diffusion model"""
     msg = await ctx.send(f"“{prompt}”\n> Generating...")
 
     model = replicate.models.get("stability-ai/stable-diffusion")
-    image = model.predict(prompt=prompt)[0]
+    version = model.versions.get("db21e45d3f7023abc2a46ee38a23973f6dce16bb082a930b0c49861f96d1e5bf")
+    image = version.predict(prompt=prompt)[0]
 
     await msg.edit(content=f"“{prompt}”\n{image}")
 
