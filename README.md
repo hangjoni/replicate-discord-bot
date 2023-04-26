@@ -34,3 +34,9 @@ To generate an image
 ```
 !stable_diffusion an astronaut riding a horse
 ```
+
+## Host the bot on the cloud
+Hosting the bot deployment on the cloud makes it highly available. This way we can use the Discord bot to generate arts even without keeping our computer running.
+
+We will be using fly.io 
+To get started, see [Fly's "speedrun" guide](https://fly.io/docs/speedrun/) to install the flyctl command-line tool and create a Fly account.
