@@ -7,9 +7,7 @@ This is a companion codebase for a [tutorial for building a text-to-image chat b
 ## Set up
 
 ```
-poetry init -n
-poetry add discord.py python-dotenv replicate
-touch .env
+pip install -r requirements.txt
 ```
 
 Add Discord and Replicate tokens to `.env` (Do not share or commit this file)
@@ -22,7 +20,7 @@ DISCORD_TOKEN=<your-token>
 To run the bot:
 
 ```
-poetry run python bot.py
+python bot.py
 ```
 
 ## Using the bot
