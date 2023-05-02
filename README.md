@@ -55,8 +55,14 @@ flyctl launch
 ```
 That command will generate a new file called fly.toml, but it's designed for running web apps so you'll need to make a few changes. Remove the [[services]] block and everything below it. Your modified file should look something like this:
 ```
-# fly.toml file generated for your-fly-app on 2022-08-25T17:37:31+01:00
-app = "your-fly-app"
+# fly.toml app configuration file generated for aged-sunset-8082 on 2023-04-26T10:22:03+08:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "aged-sunset-8082"
+primary_region = "sin"
+
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
